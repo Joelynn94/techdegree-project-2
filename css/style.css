@@ -1,18 +1,158 @@
+/*=== Universal Styles ===*/
 * {
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Merriweather', serif;
+}
+
 .container {
     text-align: center;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
-footer {
-    text-align: center;
+a {
+    text-decoration: none;
+    color: black;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+p {
+    padding-bottom: 2em;
+    line-height: 1.75em;
+    margin: 0;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+/*=== Header Styles ===*/
+
+header {
+    background-color: #FAFAFA;
+    padding-top: 1em;
+    margin: 0;
+}
+
+.name {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    
+}
+
+.profile-img {
+    width: 75%;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+
+.main-nav > li {
+    display: block;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*=== Main Styles ===*/
+
+#portfolio {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-transform: uppercase;
+}
+
+#contact {
+    background-color: #FAFAFA; 
+    padding-top: 2em;
+    padding-bottom: 2em;
+    
+}
+
+.title {
+    margin: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;   
+    text-transform: uppercase;
+}
+
+section {
+    text-align: center;
+}
+
+
+/*=== Footer Styles ===*/
+
+footer {
+    text-align: center;
+    background-color: #FAFAFA;    
+    border-top: 1px solid lightgray;
+    padding: 2em 1em 3em 1em;
+}
+
+.footer-name {
+    float: left;
+    margin: 0;
+}
+
+.footer-nav {
+    float: right;
+    display: inline-block;
+}
+
+.back-to-top {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-home,
+.footer-portfolio,
+.footer-contact {
+    display: none;
+}
+
+
+/*=== Media Queries ===*/
+
+@media (min-width:768px) {
+    .footer-home,
+    .footer-portfolio,
+    .footer-contact {
+        padding: 0 10px 0 10px;
+        float: right;
+        display: inline-block;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .back-to-top {
+        display: none;
+    }
+}
+
+
+@media (min-width:1024px) {
+    
 }
