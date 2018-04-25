@@ -9,13 +9,18 @@ body {
 
 .container {
     text-align: center;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
 
 a {
     text-decoration: none;
     color: black;
+    padding: 6px;
+    margin: 6px;
 }
 
 ul {
@@ -26,55 +31,56 @@ ul {
 
 img {
     width: 100%;
-    height: auto;
 }
 
 p {
-    padding-bottom: 2em;
     line-height: 1.75em;
     margin: 0;
 }
 
-/* ---- Float clearfix ---- */
-
-.clearfix::after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
 
 /*=== Header Styles ===*/
 
 header {
     background-color: #FAFAFA;
-    padding-top: 1em;
     margin: 0;
 }
 
-.name {
+.top-bar {
+    padding: 2em 1.5em 0.5em 1.5em;
+}
+
+.banner {
+    padding-bottom: 2em;
     margin-top: 1em;
-    margin-bottom: 1.5em;
-    
+}
+
+.name {
+    display: inline-block;
 }
 
 .profile-img {
     width: 75%;
     padding-top: 2em;
-    padding-bottom: 1em;
 }
 
+.profile-description {
+    padding-top: 2em;
+}
 
-.main-nav > li {
+.main-nav li {
     display: block;
-    background-color: white;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
+.main-nav a {
+    display: block;
+    padding: 15px 0;
+    margin: .5em .5em;
+}
 /*=== Main Styles ===*/
+
 
 #portfolio {
     text-align: center;
@@ -87,7 +93,19 @@ header {
     background-color: #FAFAFA; 
     padding-top: 2em;
     padding-bottom: 2em;
-    
+}
+
+.contact-description {
+    padding: 0 10em;
+    margin-bottom: 2.5em;
+}
+
+.contact-info {
+    margin-bottom: 1.5em;
+}
+
+.contact-info li {
+    padding: 1em 0;
 }
 
 .title {
@@ -95,6 +113,11 @@ header {
     padding-top: 2em;
     padding-bottom: 2em;   
     text-transform: uppercase;
+}
+
+.card {
+    margin-bottom: 1.2em;
+    display: inline-block;
 }
 
 section {
@@ -134,9 +157,54 @@ footer {
 }
 
 
+/*=== Float Clearfix  ===*/
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+
 /*=== Media Queries ===*/
 
+@media (max-width: 768px) {
+    .main-nav li {
+        background-color: white;
+    }
+}
+
 @media (min-width:768px) {
+
+    .main-nav li {
+        display: inline-block;
+        background: none;
+        margin: 0 0.5em;
+    }
+
+    .profile-img {
+        width: 39%;
+        float: right;
+    }
+
+    .profile-description {
+        width: 59%;
+        float: left;
+        text-align: left;
+
+    }
+
+    .card {
+        float: left;
+        width: 50%;
+        padding: 0 0.5em 0.5em;
+    }
+
+    .card p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
     .footer-home,
     .footer-portfolio,
     .footer-contact {
@@ -154,5 +222,19 @@ footer {
 
 
 @media (min-width:1024px) {
-    
+
+    .name {
+        display: inline-block;
+        float: left;
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    nav {
+        float: right;
+    }
+
+    .card {
+        width: 33.33%;
+    }
 }
