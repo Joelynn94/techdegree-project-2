@@ -1,4 +1,5 @@
 /*=== Universal Styles ===*/
+
 * {
     box-sizing: border-box;
 }
@@ -9,7 +10,7 @@ body {
 
 .container {
     text-align: center;
-    width: 100%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.5em;
@@ -39,6 +40,7 @@ p {
 }
 
 
+
 /*=== Header Styles ===*/
 
 header {
@@ -66,6 +68,7 @@ header {
 
 .profile-description {
     padding-top: 2em;
+    font-size: 1.15em;
 }
 
 .main-nav li {
@@ -79,24 +82,16 @@ header {
     padding: 15px 0;
     margin: .5em .5em;
 }
+
+
 /*=== Main Styles ===*/
 
-
-#portfolio {
-    text-align: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    text-transform: uppercase;
-}
-
 #contact {
-    background-color: #FAFAFA; 
     padding-top: 2em;
     padding-bottom: 2em;
 }
 
 .contact-description {
-    padding: 0 10em;
     margin-bottom: 2.5em;
 }
 
@@ -109,19 +104,20 @@ header {
 }
 
 .title {
-    margin: 0;
-    padding-top: 2em;
-    padding-bottom: 2em;   
+    text-align: center;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;   
     text-transform: uppercase;
 }
 
 .card {
     margin-bottom: 1.2em;
-    display: inline-block;
+    vertical-align: top;
 }
 
 section {
     text-align: center;
+    background-color: #FAFAFA;
 }
 
 
@@ -141,7 +137,6 @@ footer {
 
 .footer-nav {
     float: right;
-    display: inline-block;
 }
 
 .back-to-top {
@@ -195,14 +190,10 @@ footer {
     }
 
     .card {
-        float: left;
+        display: inline-block;
         width: 50%;
+        margin-right: -4px;
         padding: 0 0.5em 0.5em;
-    }
-
-    .card p {
-        width: 80%;
-        margin: 0 auto;
     }
 
     .footer-home,
